@@ -11,3 +11,7 @@
 	path = buildroot
 	url = https://github.com/buildroot/buildroot.git
 	branch = 2022.11.x
+[submodule "linux"]
+	path = linux
+	url = https://github.com/Gateworks/linux-malibu.git
+	branch = v6.1-malibu
