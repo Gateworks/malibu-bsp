@@ -1,3 +1,6 @@
 [submodule "uboot"]
 	path = uboot
 	url = https://github.com/Gateworks/uboot-malibu.git
+[submodule "atf"]
+	path = atf
+	url = https://github.com/Gateworks/atf-malibu.git
