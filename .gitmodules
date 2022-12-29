@@ -7,3 +7,7 @@
 [submodule "mv-ddr-marvell"]
 	path = mv-ddr-marvell
 	url = https://github.com/Gateworks/mv_ddr-malibu
+[submodule "buildroot"]
+	path = buildroot
+	url = https://github.com/buildroot/buildroot.git
+	branch = 2022.11.x
