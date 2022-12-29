@@ -4,3 +4,6 @@
 [submodule "atf"]
 	path = atf
 	url = https://github.com/Gateworks/atf-malibu.git
+[submodule "mv-ddr-marvell"]
+	path = mv-ddr-marvell
+	url = https://github.com/Gateworks/mv_ddr-malibu
