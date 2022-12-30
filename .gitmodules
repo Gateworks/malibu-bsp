@@ -18,3 +18,7 @@
 [submodule "cryptodev-linux"]
 	path = cryptodev-linux
 	url = https://github.com/cryptodev-linux/cryptodev-linux
+[submodule "binaries-marvell"]
+	path = binaries-marvell
+	url = https://github.com/MarvellEmbeddedProcessors/binaries-marvell.git
+	branch = binaries-marvell-armada-18.12
