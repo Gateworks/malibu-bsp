@@ -15,3 +15,6 @@
 	path = linux
 	url = https://github.com/Gateworks/linux-malibu.git
 	branch = v6.1-malibu
+[submodule "cryptodev-linux"]
+	path = cryptodev-linux
+	url = https://github.com/cryptodev-linux/cryptodev-linux
