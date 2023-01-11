@@ -1,24 +1,31 @@
 [submodule "uboot"]
 	path = uboot
 	url = https://github.com/Gateworks/uboot-malibu.git
+	ignore = untracked
 [submodule "atf"]
 	path = atf
 	url = https://github.com/Gateworks/atf-malibu.git
+	ignore = untracked
 [submodule "mv-ddr-marvell"]
 	path = mv-ddr-marvell
 	url = https://github.com/Gateworks/mv_ddr-malibu
+	ignore = untracked
 [submodule "buildroot"]
 	path = buildroot
 	url = https://github.com/buildroot/buildroot.git
 	branch = 2022.11.x
+	ignore = untracked
 [submodule "linux"]
 	path = linux
 	url = https://github.com/Gateworks/linux-malibu.git
 	branch = v6.1-malibu
+	ignore = untracked
 [submodule "cryptodev-linux"]
 	path = cryptodev-linux
 	url = https://github.com/cryptodev-linux/cryptodev-linux
+	ignore = untracked
 [submodule "binaries-marvell"]
 	path = binaries-marvell
 	url = https://github.com/MarvellEmbeddedProcessors/binaries-marvell.git
 	branch = binaries-marvell-armada-18.12
+	ignore = untracked
