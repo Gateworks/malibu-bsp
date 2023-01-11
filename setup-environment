@@ -1,0 +1,9 @@
+#
+# Malibu BSP shell environment setup
+#  - source this in your shell to export these env vars (do not execute it)
+#  source setup-environment
+#
+
+# cross toolchain
+export CROSS_COMPILE="aarch64-linux-gnu-"
+export ARCH=arm64
