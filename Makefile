@@ -64,7 +64,7 @@ firmware-image: atf/build/$(PLAT)/release/flash-image.bin malibu.env.bin mkimage
 	dd if=malibu.env.bin of=firmware-malibu-gw8901.img bs=1K seek=4032 conv=notrunc # 0x3f0000
 	dd if=malibu.env.bin of=firmware-malibu-gw8901.img bs=1K seek=4064 conv=notrunc # 0x3f8000
 	# create JTAG image
-	./mkimage_jtag --emmc -s --partconf=boot0 \
+	./mkimage_jtag --soc cn931x --emmc -s --partconf=boot0 \
 		firmware-malibu-gw8901.img@boot0:erase_part:0-8192 \
 		firmware-malibu-gw8901.img@boot1:erase_part:0-8192 \
 		> firmware-malibu-gw8901-jtag.bin
