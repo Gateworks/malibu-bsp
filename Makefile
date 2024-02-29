@@ -58,11 +58,15 @@ firmware-image: atf/build/$(PLAT)/release/flash-image.bin malibu.env.bin mkimage
 	md5sum firmware-malibu-gw8901.bin > firmware-malibu-gw8901.bin.md5
 	# U-Boot is built via CONFIG_DEFAULT_ENV_FILE but we also want to
 	# pre-poulate U-Boot env within image so that generic fw_env tools
-	# in Linux work
+	# in Linux work.  The env location in U-Boot is defined by
+	# CONFIG_ENV_SIZE, CONFIG_ENV_OFFSET
 	truncate -s 4M firmware-malibu-gw8901.img
 	dd if=atf/build/$(PLAT)/release/flash-image.bin of=firmware-malibu-gw8901.img bs=1M conv=notrunc
 	dd if=malibu.env.bin of=firmware-malibu-gw8901.img bs=1K seek=4032 conv=notrunc # 0x3f0000
 	dd if=malibu.env.bin of=firmware-malibu-gw8901.img bs=1K seek=4064 conv=notrunc # 0x3f8000
+	# Store a backup of the U-Boot env right below the default one that can easily be restored
+	dd if=malibu.env.bin of=firmware-malibu-gw8901.img bs=1K seek=3968 conv=notrunc
+	dd if=malibu.env.bin of=firmware-malibu-gw8901.img bs=1K seek=4000 conv=notrunc
 	# create JTAG image
 	./mkimage_jtag --soc cn931x --emmc -s --partconf=boot0 \
 		firmware-malibu-gw8901.img@boot0:erase_part:0-8192 \
